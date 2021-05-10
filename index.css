@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 12px;
+    font-family: 'Kumbh Sans', sans-serif;
+    background: #f0f0f0;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+h2{
+    font-size: 2em;
+    margin-bottom: 50px;
+}
+.main-container{
+    width: 100vw;
+    height: calc(100vh - 18px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gradiant-background {
+    width: 1300px;
+    padding: 100px 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+
+.container {
+    width: 900px;
+    height: 500px;
+    padding: 50px 100px;
+
+    display: flex;
+    border-radius: 20px;
+    background: url('images/bg-pattern-desktop.svg') no-repeat -600px -300px , #ffffff url('images/illustration-woman-online-desktop.svg') no-repeat -95px;
+}
+
+.content-box {
+    width: 100%;
+    padding-left: 400px;
+    position: relative;
+}
+
+.content-box div .flex,
+.content-box div+p,
+hr {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.display {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.d-none {
+    position: absolute;
+    opacity: 0;
+}
+
+.illustrate-box {
+    width: 175px;
+    position: absolute;
+    left: -185px;
+    bottom: 75px;
+}
+
+.flex svg {
+    cursor: pointer;
+}
+
+.question:hover {
+    color: #df5c34;
+    cursor: pointer;
+}
+
+.arrow-up {
+    transform: rotate(180deg);
+}
+
+.arrow-down {
+    transform: rotate(180deg);
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.transition {
+    transition-property: all;
+    transition-duration: 4s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 1s;
+}
+
+.shapes {
+    position: relative;
+}
+
+.shape{
+    position: absolute;
+    font-size: 200px;
+    color: #e3eaf0;
+    z-index: -1;
+}
+
+.shape--bracket {
+    left: 0;
+    top: 450px;
+}
+
+.upper-arrow {
+    font-size: 100px;
+    color: hsl(14, 88%, 65%, 0.5);
+    letter-spacing: -15px;
+    right: 0;
+    top: 850px;
+    transform: translateX(11%);
+}
+
+.shape-slash {
+    top: 0;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.shape--equal{
+    top: 0;
+    left: 250px;
+    transform: translateY(-20%);
+}
+
+.shape--bigO {
+    right: 0;
+    top: 450px;
+}
+
+.circle-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 36px;
+    right: 50px;
+    top: 75px;
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    font-size: 10px;
+    background-color: #6cbecc;
+    margin-right: 2px;
+    margin-bottom: 2px;
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+.mobile-view {
+    position: absolute;
+    left: -9999px;
+}
+
+@media screen and (max-width:425px){
+    body{
+        font-size: 14px;
+    }
+    
+    .main-container{
+        height: auto;
+    }
+    
+    .gradiant-background {
+        width: 100vw;
+        height: calc(100vh - 11px);
+        padding: 20px;
+    }
+        
+    .container {
+        width: 390px;
+        height: auto;
+        padding: 20px;
+        background: #ffffff;
+    }
+
+    .mobile-view {
+        position: relative;
+        left: 0;
+    }
+
+    .mobile-view__img-one {
+        position: absolute;
+        left: 0;
+        top: -130px;
+    }
+
+    .mobile-view__img-two {
+        position: absolute;
+        left: 25px;
+        top: -20px;
+    }
+
+    .content-box {
+        width: 100%;
+        padding: 0;
+        position: relative;
+    }
+
+    .content-box h2 {
+        margin-top: 120px;
+        text-align: center;
+        font-size: 36px;
+    }
+
+    .content-box div .flex,
+    .content-box div+p,
+    hr {
+        margin-bottom: 15px;
+    }
+
+    .shape{
+        opacity: 0;
+    }
+
+    .question:hover {
+        color: inherit;
+        cursor: pointer;
+    }
+}
